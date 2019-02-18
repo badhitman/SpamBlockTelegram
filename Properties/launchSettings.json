@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SpamBlockTelegram": {
+      "commandName": "Project",
+      "commandLineArgs": "configfile=spam-block-config.ini"
+    }
+  }
+}
