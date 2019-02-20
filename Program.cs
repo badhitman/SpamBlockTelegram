@@ -1,5 +1,5 @@
 ﻿////////////////////////////////////////////////
-// © https://github.com/badhitman 
+// © https://github.com/badhitman - Telegram @fakegov 
 ////////////////////////////////////////////////
 using MultiTool.LibraryLog;
 using MultiTool.LibraryParserIncomingArguments;
