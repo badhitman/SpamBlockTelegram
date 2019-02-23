@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using TelegramBot.TelegramMetadata;
 
 namespace SpamBlockTelegram
 {

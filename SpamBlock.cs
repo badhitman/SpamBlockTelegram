@@ -20,57 +20,6 @@ namespace SpamBlockTelegram
 {
     public enum ChatTypes { Private, Group, Supergroup, Channel, Error }
 
-    /// <summary>
-    /// Типы данных сообщения
-    /// </summary>
-    public enum TelegramDataTypes
-    {
-        /// <summary>
-        /// Признак того что к сообщению прикреплена локация
-        /// </summary>
-        Location,
-
-        /// <summary>
-        /// Признак того что в сообщении есть локация
-        /// </summary>
-        LocationText,
-
-        /// <summary>
-        /// Признак того что к сообщению прикреплено фото
-        /// </summary>
-        Photo,
-
-        /// <summary>
-        /// Признак того что к сообщению прикреплено видео
-        /// </summary>
-        Video,
-
-        /// <summary>
-        /// Признак того что к сообщению прикреплено аудио
-        /// </summary>
-        Audio,
-
-        /// <summary>
-        /// Признак того что к сообщению прикреплен документ
-        /// </summary>
-        Document,
-
-        /// <summary>
-        /// Признак того что у сообщения назначено описание медиа-данных
-        /// </summary>
-        Caption,
-
-        /// <summary>
-        /// Признак того что в сообщении есть текст
-        /// </summary>
-        Text,
-
-        /// <summary>
-        /// Признак того данное сообщение-уведомление говорит о том что в групу добавлен новый учасник
-        /// </summary>
-        NewChatMembers
-    }
-
     [DataContract]
     public class SpamBlock
     {
