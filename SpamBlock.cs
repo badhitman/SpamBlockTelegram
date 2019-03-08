@@ -1,5 +1,5 @@
 ﻿////////////////////////////////////////////////
-// © https://github.com/badhitman - Telegram @fakegov 
+// © https://github.com/badhitman - @fakegov 
 ////////////////////////////////////////////////
 using MultiTool.LibraryHmacHttp;
 using MultiTool.LibraryLog;

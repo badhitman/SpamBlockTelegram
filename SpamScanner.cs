@@ -1,5 +1,5 @@
 ﻿////////////////////////////////////////////////
-// © https://github.com/badhitman - Telegram @fakegov 
+// © https://github.com/badhitman - @fakegov 
 ////////////////////////////////////////////////
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
