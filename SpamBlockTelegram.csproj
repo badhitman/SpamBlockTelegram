@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MultiTool\MultiTool.csproj" />
+    <ProjectReference Include="..\HmacHttp\HmacHttp.csproj" />
     <ProjectReference Include="..\TelegramBot-API\TelegramBot-API.csproj" />
   </ItemGroup>
 
