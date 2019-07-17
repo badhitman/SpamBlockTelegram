@@ -1,8 +1,8 @@
 ﻿////////////////////////////////////////////////
 // © https://github.com/badhitman - @fakegov 
 ////////////////////////////////////////////////
-using MultiTool.LibraryLog;
-using MultiTool.LibraryParserIncomingArguments;
+using LibraryLog;
+using LibraryParserIncomingArguments;
 using System;
 using System.Collections.Generic;
 using System.Linq;

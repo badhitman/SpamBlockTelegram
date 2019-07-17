@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HmacHttp\HmacHttp.csproj" />
+    <ProjectReference Include="..\LibraryLog\LibraryLog.csproj" />
+    <ProjectReference Include="..\ParserIncomingArguments\ParserIncomingArguments.csproj" />
     <ProjectReference Include="..\TelegramBot-API\TelegramBot-API.csproj" />
   </ItemGroup>
 
