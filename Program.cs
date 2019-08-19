@@ -25,7 +25,7 @@ namespace SpamBlockTelegram
                 return;
             }
 
-            anti_spam = new SpamBlock(arg_parser.First(x => x.name_argument.ToLower() == "api_key_telegram_bot").value_argument);
+            anti_spam = new SpamBlock(arg_parser.SingleOrDefault(x => x.name_argument.ToLower() == "api_key_telegram_bot").value_argument);
 
             if (anti_spam.telegram_client.Me is null)
             {
@@ -35,7 +35,7 @@ namespace SpamBlockTelegram
 
             if (arg_parser.Exists(x => x.name_argument.ToLower() == "bot_admin_username"))
             {
-                anti_spam.BotAdminUsername = arg_parser.First(x => x.name_argument.ToLower() == "bot_admin_username").value_argument;
+                anti_spam.BotAdminUsername = arg_parser.SingleOrDefault(x => x.name_argument.ToLower() == "bot_admin_username").value_argument;
                 Log.WriteLine("bot_admin_username=" + anti_spam.BotAdminUsername, LogStatusEnum.Norma);
             }
             else
@@ -46,7 +46,7 @@ namespace SpamBlockTelegram
                 arg_parser.Exists(x => x.name_argument.ToLower() == "hmac_sign_key") &&
                 arg_parser.Exists(x => x.name_argument.ToLower() == "hmac_sign_secret"))
             {
-                anti_spam.SetWebhook(arg_parser.First(x => x.name_argument.ToLower() == "webhook_api_url").value_argument, arg_parser.First(x => x.name_argument.ToLower() == "hmac_sign_key").value_argument, arg_parser.First(x => x.name_argument.ToLower() == "hmac_sign_secret").value_argument);
+                anti_spam.SetWebhook(arg_parser.SingleOrDefault(x => x.name_argument.ToLower() == "webhook_api_url").value_argument, arg_parser.SingleOrDefault(x => x.name_argument.ToLower() == "hmac_sign_key").value_argument, arg_parser.SingleOrDefault(x => x.name_argument.ToLower() == "hmac_sign_secret").value_argument);
                 Log.WriteLine("Установлен Webhook/HMAC > " + anti_spam.WebhookAddress, LogStatusEnum.Norma);
             }
 
