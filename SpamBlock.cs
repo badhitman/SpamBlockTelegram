@@ -188,7 +188,7 @@ namespace SpamBlockTelegram
                 if (!string.IsNullOrEmpty(IncUpdate.message.text))
                 {
                     CompositionTypes.Add(TelegramDataTypes.Text);
-                    if(Regex.IsMatch(IncUpdate.message.text, @"^\s*\d{1,2}\.\d{1,6}\s*,\s*d{1,2}\.\d{1,6}\s*$"))
+                    if (Regex.IsMatch(IncUpdate.message.text, @"^\s*\d{1,2}\.\d{1,6}\s*,\s*d{1,2}\.\d{1,6}\s*$"))
                         CompositionTypes.Add(TelegramDataTypes.LocationText);
                 }
                 if (!string.IsNullOrEmpty(IncUpdate.message.caption))
@@ -243,7 +243,7 @@ namespace SpamBlockTelegram
                 Regex rex = new Regex(@"^/\w[\w\d_]+@" + telegram_client.Me.username + "$", RegexOptions.IgnoreCase);
                 if (CompositionTypes.Exists(x => x == TelegramDataTypes.Text) && rex.IsMatch(IncUpdate.message.text))
                 {
-                    telegram_client.sendMessage(IncUpdate.message.chat.id.ToString(), "Для общения с ботом напишите ему напрямую @" + telegram_client.Me.username, "", false, false, IncUpdate.message.chat.id);
+                    telegram_client.sendMessage(IncUpdate.message.chat.id.ToString(), "Для общения с ботом напишите ему напрямую @" + telegram_client.Me.username, null, false, false, IncUpdate.message.chat.id);
                     return;
                 }
                 if (ScanSpamMatches.Count > 0)
@@ -279,7 +279,7 @@ namespace SpamBlockTelegram
                 {
                     using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                     {
-                        if(!hmacHttp.VerifyResponse(response))
+                        if (!hmacHttp.VerifyResponse(response))
                         {
                             Log.WriteLine("Ответ API Webhook не подписан или подписан не действительной поджписью", LogStatusEnum.Alarm);
                             return;
@@ -299,7 +299,7 @@ namespace SpamBlockTelegram
                                         ResultHmacResponseClass resultHmac = (ResultHmacResponseClass)glob_tools.DeSerialiseJSON(typeof(ResultHmacResponseClass), responsebody);
                                         Log.Write("API HMAC JSON - прочитан ");
                                         Log.WriteLine(resultHmac.status.ToString("g"), resultHmac.status == StatusResult.Ok ? LogStatusEnum.Happi : LogStatusEnum.Alarm);
-                                        
+
                                     }
                                     catch (Exception e)
                                     {
