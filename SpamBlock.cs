@@ -23,7 +23,7 @@ namespace SpamBlockTelegram
     [DataContract]
     public class SpamBlock
     {
-        public TelegramClient telegram_client;
+        public TelegramClientCore telegram_client;
         public LogClass Log = new LogClass() { MinimalLogStatusWrite = LogStatusEnum.Alarm };
 
         ////////////////////////////////////////////////////////
@@ -99,7 +99,7 @@ namespace SpamBlockTelegram
 
         public SpamBlock(string telegram_api_key_bot)
         {
-            telegram_client = new TelegramClient(telegram_api_key_bot);
+            telegram_client = new TelegramClientCore(telegram_api_key_bot);
             if (telegram_client.Me is null)
                 Log.WriteLine("API bot-key invalid", LogStatusEnum.Alarm);
             else
