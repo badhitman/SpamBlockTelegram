@@ -95,7 +95,7 @@ namespace SpamBlockTelegram
         /// <summary>
         /// Тип контекста/переписки (частный, группа, супергруппа, группа ...)
         /// </summary>
-        public ChatTypes ChatType;
+        public ChatTypes ChatType { get; set; }
 
         public SpamBlock(string telegram_api_key_bot)
         {
