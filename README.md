@@ -55,7 +55,7 @@ goto loop
 Настройка и запуск:
 - Создайте текстовый файл рядом с исполняемым файлом. Дайте ему понятное имя файла конфигурации. Например **stop-spam-bot-config.ini**
 - Запишите туда все необходимые парамеьтры:
-Пример файла можно посмотреть тут https://github.com/badhitman/SpamBlockTelegramGroup/blob/master/stop-spam-bot-config.ini
+Пример файла можно посмотреть тут https://github.com/badhitman/SpamBlockTelegram/blob/master/stop-spam-bot-config.ini
 - потом запускайте программу с ключём **configfile=stop-spam-bot-config.ini**
 
 В файле конфигурации можно указать сколько угодно слов для удаления сообщения или для уведомления администраторов.
